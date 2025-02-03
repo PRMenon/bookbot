@@ -21,11 +21,8 @@ def sort_alphabets(d):
     for c,count in d.items():
         if c.isalpha():
             char_list.append({"char": c, "count": count})
-    
-    def sort_on(dict):
-        return dict["count"]
-      
-    char_list.sort(reverse = True, key = sort_on)
+        
+    char_list.sort(reverse = True, key = lambda item: item["count"] )
     return char_list
 
 def print_report(path:str):
@@ -43,3 +40,4 @@ def print_report(path:str):
     print("--- End Report ---")
 
 main()
+
